@@ -3,7 +3,7 @@ package medium;
 import java.util.Stack;
 
 public class AsteroidCollision {
-
+//  https://leetcode.com/problems/asteroid-collision/?envType=study-plan-v2&envId=leetcode-75
 	public int[] asteroidCollisionBest(int[] asteroids) { // check again
         int i=0, pos=1, n = asteroids.length;
         for(i=1;i<n;i++){
