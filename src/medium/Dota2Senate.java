@@ -4,7 +4,7 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 public class Dota2Senate {
-
+// // https://leetcode.com/problems/dota2-senate/?envType=study-plan-v2&envId=leetcode-75
 	public String predictPartyVictoryBest(String senate) {
         return voting(senate.toCharArray(), 0);
     }
