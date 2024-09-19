@@ -16,7 +16,28 @@ public class MoveZeroes {
 			System.out.print(nums[i] + " ");
 		System.out.println();
 	}
-
+    public void slowSolution4(int[] nums) { // Best
+        int c = 0;
+        for (int i = 0; i < nums.length; i++){
+            if (nums[i] == 0){
+                moveIt(nums, i, c);
+                break;
+            }
+        }
+    }
+    public static void moveIt(int[] nums, int i, int c){
+        c++;
+        for (int j = i + 1; j < nums.length; j++) {
+            if (nums[j] == 0) {
+                moveIt(nums, j, c);
+                return;
+            }
+            nums[j - c] = nums[j];
+        }
+        for (int k = 1; k < c + 1; k++) {
+            nums[nums.length - k] = 0;
+        }
+    }
 	public void moveZeroes1(int[] nums) { // O(N)
 		int k = 0; // track 0th position
 		for (int i = 0; i <nums.length; i++) {
