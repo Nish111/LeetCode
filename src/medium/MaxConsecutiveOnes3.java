@@ -1,7 +1,7 @@
 package medium;
 
 public class MaxConsecutiveOnes3 {
-
+// https://leetcode.com/problems/max-consecutive-ones-iii/?envType=study-plan-v2&envId=leetcode-75
 	public int longestOnes(int[] nums, int k) {
 		int n = nums.length, noOfOnes = 0;
 		;
