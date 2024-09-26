@@ -8,7 +8,7 @@ public class MinimumFlipsToMakeAOrBEqualToC {
     	if(a<=c && b<=c) {
     		if(a==c || b==c) return 0;
     	}
-    	int temp = Math.abs((a+b)^c);
+    	int temp = Math.abs((a|b)^c);
         int res=0;
         while(temp>0){
             temp = temp & (temp-1); // converting to binary
@@ -56,7 +56,14 @@ public class MinimumFlipsToMakeAOrBEqualToC {
 		System.out.println(mf.minFlips(7, 7, 7)); // 0
 		System.out.println(mf.minFlips(7, 5, 7)); // 0
 		System.out.println(mf.minFlips(8, 3, 5)); // 3
-		System.out.println(mf.minFlips(10, 9, 1)); // 3 -- 2
+		System.out.println(mf.minFlips(10, 9, 1)); // 3 
+		System.out.println(mf.minFlipsN(2, 6, 5)); // 3
+		System.out.println(mf.minFlipsN(4, 2, 7)); // 1
+		System.out.println(mf.minFlipsN(1, 2, 3)); // 0
+		System.out.println(mf.minFlipsN(7, 7, 7)); // 0
+		System.out.println(mf.minFlipsN(7, 5, 7)); // 0
+		System.out.println(mf.minFlipsN(8, 3, 5)); // 3
+		System.out.println(mf.minFlipsN(10, 9, 1)); // 2 - not working
 		/*
 		 * Input: a = 2, b = 6, c = 5
 Output: 3
